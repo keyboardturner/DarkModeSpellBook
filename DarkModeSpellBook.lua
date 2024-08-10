@@ -2,8 +2,6 @@ local _, L = ...
 
 local f = CreateFrame("Frame");
 f:RegisterEvent("ADDON_LOADED");
-f:RegisterEvent("PLAYER_STARTED_MOVING");
-f:RegisterEvent("PLAYER_STOPPED_MOVING");
 
 local DefaultSettings = {
 	Name = {
@@ -310,10 +308,10 @@ function f.SetColors()
 				PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.PagingControls.PageText:SetVertexColor(f.color("PageText"));
 			end
 	
-			RePosition()
 		end
 	end
-	
+
+	RePosition()
 end
 
 local function SetupFade(self)
