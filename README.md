@@ -2,7 +2,6 @@
 
 This addon alllows changing the colors of various background images and text, allowing you to not be blinded by the bright spellbook colors when opening the spellbook.
 
-
 This includes options for:
 
     Spell Text
