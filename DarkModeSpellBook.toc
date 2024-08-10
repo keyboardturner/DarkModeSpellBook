@@ -1,0 +1,36 @@
+## Interface: 110000, 110002
+## Author: Keyboardturner
+## Version: 0.0.1
+## Title: Dark Mode Spellbook
+## Notes: Allows changing the colors of the spellbook frame background images and text.
+## AddonCompartmentFunc: DarkModeSpellBook_OnAddonCompartmentClick
+## AddonCompartmentFuncOnEnter: DarkModeSpellBook_OnAddonCompartmentEnter
+## AddonCompartmentFuncOnLeave: DarkModeSpellBook_OnAddonCompartmentLeave
+## IconTexture: interface/icons/inv_misc_book_09
+
+## Title-enUS: Dark Mode Spellbook
+## Notes-enUS: Allows changing the colors of the spellbook frame background images and text.
+## Title-esES: Modo Oscuro para el Libro de Hechizos
+## Notes-esES: Permite cambiar los colores de las imágenes de fondo y del texto del marco del libro de hechizos.
+## Title-esMX: Modo Oscuro para el Libro de Hechizos
+## Notes-esMX: Permite cambiar los colores de las imágenes de fondo y del texto del marco del libro de hechizos.
+## Title-deDE: Dunkler Modus Zauberbuch
+## Notes-deDE: Ermöglicht das Ändern der Farben der Hintergrundbilder und des Textes im Zauberbuchrahmen.
+## Title-frFR: Mode Sombre Grimoire
+## Notes-frFR: Permet de changer les couleurs des images de fond et du texte du cadre du grimoire.
+## Title-itIT: Modalità Scura Libro degli Incantesimi
+## Notes-itIT: Consente di cambiare i colori delle immagini di sfondo e del testo del frame del libro degli incantesimi.
+## Title-ptBR: Modo Escuro Grimório
+## Notes-ptBR: Permite alterar as cores das imagens de fundo e do texto do quadro do grimório.
+## Title-ruRU: Темный Режим Книги Заклинаний
+## Notes-ruRU: Позволяет изменять цвета фонов и текста в рамке книги заклинаний.
+## Title-koKR: 어두운 모드 주문서
+## Notes-koKR: 주문서 프레임 배경 이미지 및 텍스트의 색상을 변경할 수 있습니다.
+## Title-zhCN: 深色模式法术书
+## Notes-zhCN: 允许更改法术书框架背景图像和文本的颜色。
+## Title-zhTW: 深色模式法術書
+## Notes-zhTW: 允許更改法術書框架背景圖像和文本的顏色。
+## SavedVariables: DMSB_DB
+
+Localization.lua
+DarkModeSpellBook.lua
