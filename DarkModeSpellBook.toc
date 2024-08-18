@@ -1,12 +1,15 @@
 ## Interface: 110000, 110002
 ## Author: Keyboardturner
-## Version: 0.0.1
+## Version: @project-version@
 ## Title: Dark Mode Spellbook
 ## Notes: Allows changing the colors of the spellbook frame background images and text.
 ## AddonCompartmentFunc: DarkModeSpellBook_OnAddonCompartmentClick
 ## AddonCompartmentFuncOnEnter: DarkModeSpellBook_OnAddonCompartmentEnter
 ## AddonCompartmentFuncOnLeave: DarkModeSpellBook_OnAddonCompartmentLeave
 ## IconTexture: interface/icons/inv_misc_book_09
+## X-Curse-Project-ID: 1081440
+## X-WoWI-ID: 26797
+## X-Wago-ID: n6VPwWGd
 
 ## Title-enUS: Dark Mode Spellbook
 ## Notes-enUS: Allows changing the colors of the spellbook frame background images and text.
