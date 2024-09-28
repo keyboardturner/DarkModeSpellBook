@@ -58,6 +58,12 @@ local DefaultSettings = {
 		b = 1,
 		a = 1,
 	},
+	RequiredLevel = {
+		r = 1,
+		g = 1,
+		b = 1,
+		a = 1,
+	},
 	HideButton = false,
 	FadeFrame = true,
 };
@@ -223,6 +229,8 @@ f.BackdropFrame.DMSBsettingsFrame_Hide_Checkbox.text:SetScript("OnEnter", functi
 end);
 f.BackdropFrame.DMSBsettingsFrame_Hide_Checkbox.text:SetScript("OnLeave", f.tooltip_OnLeave);
 
+f.BackdropFrame:SetHeight((25*backdropPlacement))
+
 
 local function RePosition()
 	f.button:ClearAllPoints()
@@ -270,6 +278,9 @@ function f.SetColors()
 					--beepis[k].Backplate:SetAlpha(0)
 
 					beepis[k].Backplate:SetVertexColor(f.color("Backplate_OnLeave")); -- *all* the textures behind text
+				end
+				if beepis[k].RequiredLevel then
+					beepis[k].RequiredLevel:SetVertexColor(f.color("RequiredLevel")); -- *all* the textures behind text
 				end
 
 				
@@ -438,7 +449,10 @@ end
 function f.event(self, event, arg1)
 	if event == "ADDON_LOADED" and arg1 == "DarkModeSpellBook" then
 		if DMSB_DB == nil then
-			DMSB_DB = CopyTable(DefaultSettings)
+			DMSB_DB = CopyTable(DefaultSettings);
+		end
+		if not DMSB_DB.RequiredLevel then
+			DMSB_DB.RequiredLevel = CopyTable(DefaultSettings.RequiredLevel);
 		end
 		f.BackdropFrame.DMSBsettingsFrame_Fade_Checkbox:SetChecked(DMSB_DB["FadeFrame"])
 

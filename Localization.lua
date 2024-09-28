@@ -35,6 +35,8 @@ if LOCALE == "enUS" then
 	L["FadeFrameTT"] = "Toggles the fading functionality of the spellbook frame (this includes the Specialization and Talents frame)."
 	L["HideButton"] = "Hide Spellbook Colors Button"
 	L["HideButtonTT"] = "Hide the Spellbook Colors button. This can be toggled in the AddOn Compartment Frame on the minimap."
+	L["RequiredLevel"] = "Required Level"
+	L["RequiredLevelTT"] = "Changes the color of the required level text."
 
 return end
 
@@ -63,6 +65,9 @@ if LOCALE == "esES" or LOCALE == "esMX" then
 	L["FadeFrameTT"] = "Alterna la funcionalidad de desvanecimiento del marco del libro de hechizos (esto incluye el marco de Especialización y Talentos)."
 	L["HideButton"] = "Ocultar Botón de Colores del Libro de Hechizos"
 	L["HideButtonTT"] = "Ocultar el botón de Colores del Libro de Hechizos. Esto se puede alternar en el marco del compartimento del AddOn en el minimapa."
+	L["RequiredLevel"] = "Nivel Requerido"
+	L["RequiredLevelTT"] = "Cambia el color del texto del nivel requerido."
+
 
 return end
 
@@ -91,6 +96,9 @@ if LOCALE == "deDE" then
 	L["FadeFrameTT"] = "Schaltet die Ausblendfunktion des Zauberbuchs ein/aus (einschließlich des Rahmens für Spezialisierungen und Talente)."
 	L["HideButton"] = "Zauberbuchfarben-Button ausblenden"
 	L["HideButtonTT"] = "Blendet den Button für Zauberbuchfarben aus. Dies kann im AddOn-Fachrahmen auf der Minikarte umgeschaltet werden."
+	L["RequiredLevel"] = "Erforderliches Level"
+	L["RequiredLevelTT"] = "Ändert die Farbe des erforderlichen Level-Textes."
+
 
 return end
 
@@ -119,6 +127,9 @@ if LOCALE == "frFR" then
 	L["FadeFrameTT"] = "Active/désactive la fonctionnalité d'estompage du cadre du grimoire (cela inclut le cadre des Spécialisations et Talents)."
 	L["HideButton"] = "Cacher le Bouton des Couleurs du Grimoire"
 	L["HideButtonTT"] = "Cacher le bouton des Couleurs du Grimoire. Cela peut être activé/désactivé dans le cadre du compartiment AddOn sur la minimap."
+	L["RequiredLevel"] = "Niveau Requis"
+	L["RequiredLevelTT"] = "Change la couleur du texte du niveau requis."
+
 
 return end
 
@@ -147,6 +158,9 @@ if LOCALE == "itIT" then
 	L["FadeFrameTT"] = "Attiva/disattiva la funzionalità di sfumatura del frame del libro degli incantesimi (questo include il frame di Specializzazione e Talenti)."
 	L["HideButton"] = "Nascondi il Pulsante Colori del Libro degli Incantesimi"
 	L["HideButtonTT"] = "Nascondi il pulsante Colori del Libro degli Incantesimi. Questo può essere attivato/disattivato nel frame del compartimento AddOn sulla minimappa."
+	L["RequiredLevel"] = "Livello Richiesto"
+	L["RequiredLevelTT"] = "Cambia il colore del testo del livello richiesto."
+
 
 return end
 
@@ -175,6 +189,9 @@ if LOCALE == "ptBR" then
 	L["FadeFrameTT"] = "Alterna a funcionalidade de esmaecimento do quadro do grimório (isso inclui o quadro de Especialização e Talentos)."
 	L["HideButton"] = "Ocultar Botão de Cores do Grimório"
 	L["HideButtonTT"] = "Ocultar o botão de Cores do Grimório. Isso pode ser alternado no Quadro de Compartimento de AddOn no minimapa."
+	L["RequiredLevel"] = "Nível Requerido"
+	L["RequiredLevelTT"] = "Altera a cor do texto do nível requerido."
+
 
 -- Note that the EU Portuguese WoW client also
 -- uses the Brazilian Portuguese locale code.
@@ -205,6 +222,9 @@ if LOCALE == "ruRU" then
 	L["FadeFrameTT"] = "Переключение функции затухания рамки книги заклинаний (включая рамку Специализаций и Талантов)."
 	L["HideButton"] = "Скрыть Кнопку Цветов Книги Заклинаний"
 	L["HideButtonTT"] = "Скрыть кнопку Цветов Книги Заклинаний. Это можно переключить в рамке раздела AddOn на миникарте."
+	L["RequiredLevel"] = "Требуемый уровень"
+	L["RequiredLevelTT"] = "Изменяет цвет текста требуемого уровня."
+
 
 return end
 
@@ -233,6 +253,9 @@ if LOCALE == "koKR" then
 	L["FadeFrameTT"] = "주문서 창(전문화 및 특성 창 포함)의 페이딩 기능을 켜거나 끕니다."
 	L["HideButton"] = "주문서 색상 버튼 숨기기"
 	L["HideButtonTT"] = "주문서 색상 버튼을 숨깁니다. 이것은 미니맵의 애드온 컴파트먼트 프레임에서 전환할 수 있습니다."
+	L["RequiredLevel"] = "필요한 레벨"
+	L["RequiredLevelTT"] = "필요한 레벨 텍스트의 색상을 변경합니다."
+
 
 return end
 
@@ -261,6 +284,9 @@ if LOCALE == "zhCN" then
 	L["FadeFrameTT"] = "移动时使法术书变成半透明。这个选项同时作用于法术书、专精和天赋界面。"
 	L["HideButton"] = "隐藏深色法术书设置选项按钮"
 	L["HideButtonTT"] = "隐藏深色法术书的设置选项按钮。可以在小地图上的插件菜单中切换此选项。"
+	L["RequiredLevel"] = "所需等级"
+	L["RequiredLevelTT"] = "更改所需等级文字的颜色。"
+
 
 return end
 
@@ -289,5 +315,8 @@ if LOCALE == "zhTW" then
 	L["FadeFrameTT"] = "移動時使法術書變成半透明。這個功能同時作用於法術書、專精和天賦介面。"
 	L["HideButton"] = "隱藏深色法術書設定選項按鈕"
 	L["HideButtonTT"] = "隱藏深色法術書的設定選項按鈕。可以在小地圖上的插件选單中切換此選項。"
+	L["RequiredLevel"] = "所需等級"
+	L["RequiredLevelTT"] = "更改所需等級文字的顏色。"
+
 
 return end
