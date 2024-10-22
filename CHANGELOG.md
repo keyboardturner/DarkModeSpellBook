@@ -1,3 +1,7 @@
+# 0.0.5
+
+11.0.5 toc update
+
 # 0.0.4
 
 Added option for Required Level text in the spellbook (normally at max level this is hidden)
