@@ -33,6 +33,18 @@
 ## Notes-zhCN: 允许更改法术书框架背景图像和文本的颜色。
 ## Title-zhTW: 深色模式法術書
 ## Notes-zhTW: 允許更改法術書框架背景圖像和文本的顏色。
+## Category-enUS: User Interface
+## Category-deDE: Benutzerinterface
+## Category-esES: Interfaz de usuario
+## Category-esMX: Interfaz de usuario
+## Category-frFR: Interface utilisateur
+## Category-itIT: Interfaccia utente
+## Category-koKR: 사용자 인터페이스
+## Category-ptBR: Interface do usuário
+## Category-ruRU: Интерфейс пользователя
+## Category-zhCN: 用户界面
+## Category-zhTW: 使用者介面
+
 ## SavedVariables: DMSB_DB
 
 Localization.lua
