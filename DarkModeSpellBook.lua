@@ -432,18 +432,42 @@ end
 local function ToggleButton()
 	if DMSB_DB["HideButton"] == true then
 		DMSB_DB["HideButton"] = false;
-		if PlayerSpellsFrame.SpellBookFrame:IsShown() then
+		if PlayerSpellsFrame and PlayerSpellsFrame.SpellBookFrame and PlayerSpellsFrame.SpellBookFrame:IsShown() then
 			f.button:Show();
 		end
 		return
 	end
 	if DMSB_DB["HideButton"] == false then
 		DMSB_DB["HideButton"] = true;
-		if PlayerSpellsFrame.SpellBookFrame:IsShown() then
+		if PlayerSpellsFrame and PlayerSpellsFrame.SpellBookFrame and PlayerSpellsFrame.SpellBookFrame:IsShown() then
 			f.button:Hide();
 		end
 		return
 	end
+end
+		
+function DarkModeSpellBook_OnAddonCompartmentClick(addonName, buttonName, menuButtonFrame)
+	ToggleButton()
+end
+
+function DarkModeSpellBook_OnAddonCompartmentEnter(addonName, menuButtonFrame)
+	local tooltipData = {
+		L["HideButtonTT"],
+	}
+	local concatenatedString
+	for k, v in ipairs(tooltipData) do
+		if concatenatedString == nil then
+			concatenatedString = v
+		else
+			concatenatedString = concatenatedString .. "\n".. v
+		end
+		
+	end
+	f.tooltip_OnEnter(menuButtonFrame, concatenatedString);
+end
+
+function DarkModeSpellBook_OnAddonCompartmentLeave(addonName, menuButtonFrame)
+	f.tooltip_OnLeave();
 end
 
 function f.event(self, event, arg1)
@@ -475,31 +499,6 @@ function f.event(self, event, arg1)
 		
 		PlayerSpellsFrame:HookScript("OnShow", SetupFade);
 		PlayerSpellsFrame:HookScript("OnHide", CleanupFade);
-
-		
-		function DarkModeSpellBook_OnAddonCompartmentClick(addonName, buttonName, menuButtonFrame)
-			ToggleButton()
-		end
-
-		function DarkModeSpellBook_OnAddonCompartmentEnter(addonName, menuButtonFrame)
-			local tooltipData = {
-				L["HideButtonTT"],
-			}
-			local concatenatedString
-			for k, v in ipairs(tooltipData) do
-				if concatenatedString == nil then
-					concatenatedString = v
-				else
-					concatenatedString = concatenatedString .. "\n".. v
-				end
-				
-			end
-			f.tooltip_OnEnter(menuButtonFrame, concatenatedString);
-		end
-
-		function DarkModeSpellBook_OnAddonCompartmentLeave(addonName, menuButtonFrame)
-			f.tooltip_OnLeave();
-		end
 	end
 
 end
