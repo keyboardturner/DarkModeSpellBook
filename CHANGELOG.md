@@ -1,3 +1,7 @@
+# 0.1.2
+
+11.2.7 toc update
+
 # 0.1.1
 
 Fix error in logic if the spellbook has not yet been opened prior to hovering over the addon compartment frame button.
