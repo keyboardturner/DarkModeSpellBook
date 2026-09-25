@@ -1,4 +1,7 @@
-local _, L = ...
+local _, L = ...;
+
+local build = select(4, GetBuildInfo());
+local IsForever = build >= 16000 and build < 20000;
 
 local f = CreateFrame("Frame");
 f:RegisterEvent("ADDON_LOADED");
@@ -260,7 +263,7 @@ end
 
 function f.SetColors()
 	for key, scrungus in pairs(bongus) do
-		if scrungus then
+		if scrungus and scrungus.GetLayoutChildren then
 			local beepis = scrungus:GetLayoutChildren();
 			for k, v in pairs(beepis) do
 				if beepis[k].Name then
@@ -300,29 +303,31 @@ function f.SetColors()
 					beepis[k].Border:SetVertexColor(f.color("Border")); -- seprators
 				end
 			end
-			if PlayerSpellsFrame.SpellBookFrame.BookBGLeft then
-				PlayerSpellsFrame.SpellBookFrame.BookBGLeft:SetVertexColor(f.color("Background"));
+			if PlayerSpellsFrame and PlayerSpellsFrame.SpellBookFrame then
+				local sbf = PlayerSpellsFrame.SpellBookFrame;
+				if sbf.BookBGLeft then
+					sbf.BookBGLeft:SetVertexColor(f.color("Background"));
+				end
+				if sbf.BookBGRight then
+					sbf.BookBGRight:SetVertexColor(f.color("Background"));
+				end
+				if sbf.BookCornerFlipbook then
+					sbf.BookCornerFlipbook:SetVertexColor(f.color("Background"));
+				end
+				if sbf.BookBGHalved then
+					sbf.BookBGHalved:SetVertexColor(f.color("Background"));
+				end
+				if sbf.Bookmark then
+					sbf.Bookmark:SetVertexColor(f.color("Bookmark"));
+				end
+				if sbf.PagedSpellsFrame and sbf.PagedSpellsFrame.PagingControls and sbf.PagedSpellsFrame.PagingControls.PageText then
+					sbf.PagedSpellsFrame.PagingControls.PageText:SetVertexColor(f.color("PageText"));
+				end
 			end
-			if PlayerSpellsFrame.SpellBookFrame.BookBGRight then
-				PlayerSpellsFrame.SpellBookFrame.BookBGRight:SetVertexColor(f.color("Background"));
-			end
-			if PlayerSpellsFrame.SpellBookFrame.BookCornerFlipbook then
-				PlayerSpellsFrame.SpellBookFrame.BookCornerFlipbook:SetVertexColor(f.color("Background"));
-			end
-			if PlayerSpellsFrame.SpellBookFrame.BookBGHalved then
-				PlayerSpellsFrame.SpellBookFrame.BookBGHalved:SetVertexColor(f.color("Background"));
-			end
-			if PlayerSpellsFrame.SpellBookFrame.Bookmark then
-				PlayerSpellsFrame.SpellBookFrame.Bookmark:SetVertexColor(f.color("Bookmark"));
-			end
-			if PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.PagingControls.PageText then
-				PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.PagingControls.PageText:SetVertexColor(f.color("PageText"));
-			end
-	
 		end
 	end
 
-	RePosition()
+	RePosition();
 end
 
 -- Using Blizz's globally accessible frame fade function causes taint with the map
@@ -489,10 +494,11 @@ function f.event(self, event, arg1)
 		bongus = {
 			PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.View1,
 			PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.View2,
-			PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.BookBGHalved,
 		};
 		
-		hooksecurefunc(PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.elementTemplateData.SPELL, "initFunc", f.SetColors);
+		if PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.elementTemplateData and PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.elementTemplateData.SPELL then
+			hooksecurefunc(PlayerSpellsFrame.SpellBookFrame.PagedSpellsFrame.elementTemplateData.SPELL, "initFunc", f.SetColors);
+		end
 		if C_AddOns.IsAddOnLoaded("DarkModeSpellBook") == true and C_AddOns.IsAddOnLoaded("Blizzard_PlayerSpells") == true then
 			f:UnregisterEvent("ADDON_LOADED");
 		end
